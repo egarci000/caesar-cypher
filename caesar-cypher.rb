@@ -2,7 +2,7 @@ $alphabet_in_arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 
 def get_caesar_cypher(phrase, shift_factor)
   new_phrase = phrase.chars.map do |char|
-    if $alphabet_in_arr.include?(char) || $alphabet_in_arr.include?(char.downcase)
+    if $alphabet_in_arr.include?(char.downcase)
       if(($alphabet_in_arr.index(char.downcase) + 1) + shift_factor > 26)
         calc_expression = shift_factor - (26 + (26 - ($alphabet_in_arr.index(char.downcase) + 1) + 1))
         new_char = $alphabet_in_arr.at(calc_expression)
